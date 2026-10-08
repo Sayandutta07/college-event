@@ -28,7 +28,7 @@
 
 /* Dark mode: indigo becomes the paper, marigold stays the accent */
 body.dark {
-  --paper: #10142b;
+  --paper: hwb(315 9% 14%);
   --ink: #f3efe4;
   --ink-muted: #b7b9c9;
   --line: #2c3460;
