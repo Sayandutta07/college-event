@@ -34,9 +34,9 @@ body.dark {
   --line: lch(90.61% 89.91 102.13);
   --surface: lab(89.21% -44.89 -13.31);
   --tint: #151a38;
-  --indigo: #1a0950;
+  --indigo: hsl(118, 85%, 63%);
   /* headings flip to light */
-  --indigo-deep: #0b0e20;
+  --indigo-deep: hsl(230, 23%, 74%);
 }
 
 /* ---------- Base ---------- */
@@ -291,7 +291,7 @@ body.dark .btn-ghost:hover {
 }
 
 body.dark .hero {
-  color: #f3efe4;
+  color: hsl(353, 90%, 40%);
 }
 
 .hero h1 {
