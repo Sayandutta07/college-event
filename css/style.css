@@ -6,11 +6,11 @@
 /* ---------- Design tokens ---------- */
 :root {
   --indigo: #3b1f5a;
-  --indigo-deep: #13193a;
-  --marigold: #4d00f2;
+  --indigo-deep: hsl(28, 84%, 43%);
+  --violet: #4d00f2;
   --marigold-soft: #25b544;
   --paper: #ff8c1a;
-  --ink: #18181b;
+  --ink: hsl(320, 83%, 35%);
   --ink-muted: #3f3f46;
   --line: #e0740b;
   --surface: #ffffff;
