@@ -30,8 +30,8 @@
 body.dark {
   --paper: hwb(315 9% 14%);
   --ink: #f3efe4;
-  --ink-muted: #b7b9c9;
-  --line: #2c3460;
+  --ink-muted: hwb(233 1% 89% / 0.874);
+  --line: hsl(230, 17%, 7%);
   --surface: #181e40;
   --tint: #151a38;
   --indigo: #f3efe4;
