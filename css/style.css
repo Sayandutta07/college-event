@@ -29,12 +29,12 @@
 /* Dark mode: indigo becomes the paper, marigold stays the accent */
 body.dark {
   --paper: hwb(315 9% 14%);
-  --ink: #f3efe4;
+  --ink: hsl(45, 71%, 5%);
   --ink-muted: lch(86.59% 115.45 136.78 / 0.874);
   --line: lch(90.61% 89.91 102.13);
   --surface: lab(89.21% -44.89 -13.31);
   --tint: #151a38;
-  --indigo: #f3efe4;
+  --indigo: #1a0950;
   /* headings flip to light */
   --indigo-deep: #0b0e20;
 }
