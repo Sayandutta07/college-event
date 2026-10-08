@@ -6,9 +6,10 @@
 /* ---------- Design tokens ---------- */
 :root {
   --indigo: #3b1f5a;
-  --indigo-deep: hsl(28, 84%, 43%);
+  --indigo-deep: #13193a;
+  --marigold: #6366f1;
   --violet: #4d00f2;
-  --marigold-soft: #25b544;
+  --marigold-soft: #818cf8;
   --paper: #ff8c1a;
   --ink: hsl(320, 83%, 35%);
   --ink-muted: #3f3f46;
@@ -28,15 +29,15 @@
 
 /* Dark mode: indigo becomes the paper, marigold stays the accent */
 body.dark {
-  --paper: hwb(315 9% 14%);
-  --ink: hsl(45, 71%, 5%);
-  --ink-muted: lch(86.59% 115.45 136.78 / 0.874);
-  --line: lch(90.61% 89.91 102.13);
-  --surface: lab(89.21% -44.89 -13.31);
+  --paper: #10142b;
+  --ink: #ffffff;
+  --ink-muted: #e2e8f0;
+  --line: #2c3460;
+  --surface: #181e40;
   --tint: #151a38;
-  --indigo: hsl(118, 85%, 63%);
+  --indigo: #ffffff;
   /* headings flip to light */
-  --indigo-deep: hsl(230, 23%, 74%);
+  --indigo-deep: #0b0e20;
 }
 
 /* ---------- Base ---------- */
@@ -283,7 +284,7 @@ body.dark .btn-ghost:hover {
 /* ---------- Hero ---------- */
 .hero {
   background: var(--indigo-deep);
-  color: var(--paper);
+  color: #ffffff;
   padding: clamp(3rem, 8vw, 6rem) 0;
   background-image:
     radial-gradient(circle at 85% 15%, rgba(242, 169, 0, .22), transparent 40%),
@@ -291,11 +292,11 @@ body.dark .btn-ghost:hover {
 }
 
 body.dark .hero {
-  color: hsl(353, 90%, 40%);
+  color: #ffffff;
 }
 
 .hero h1 {
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero-grid {
@@ -306,14 +307,15 @@ body.dark .hero {
 }
 
 .hero-kicker {
-  color: var(--marigold);
+  color: #facc15;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-lead {
   font-size: 1.15rem;
-  opacity: .9;
+  color: #f1f5f9;
+  opacity: .95;
 }
 
 .hero-actions {

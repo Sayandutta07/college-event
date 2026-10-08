@@ -28,15 +28,15 @@
 
 /* Dark mode: indigo becomes the paper, marigold stays the accent */
 body.dark {
-  --paper: #0e7610;
-  --ink: #f3efe4;
-  --ink-muted: #b7b9c9;
+  --paper: #10142b;
+  --ink: #ffffff;
+  --ink-muted: #e2e8f0;
   --line: #2c3460;
   --surface: #181e40;
   --tint: #151a38;
-  --indigo: #f3efe4;
+  --indigo: #ffffff;
   /* headings flip to light */
-  --indigo-deep: #0b0e20;
+  --indigo-deep: #ffffff;
 }
 
 /* ---------- Base ---------- */
@@ -283,7 +283,7 @@ body.dark .btn-ghost:hover {
 /* ---------- Hero ---------- */
 .hero {
   background: var(--indigo-deep);
-  color: var(--paper);
+  color: #ffffff;
   padding: clamp(3rem, 8vw, 6rem) 0;
   background-image:
     radial-gradient(circle at 85% 15%, rgba(242, 169, 0, .22), transparent 40%),
@@ -291,11 +291,11 @@ body.dark .btn-ghost:hover {
 }
 
 body.dark .hero {
-  color: #f3efe4;
+  color: #ffffff;
 }
 
 .hero h1 {
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero-grid {
@@ -306,14 +306,15 @@ body.dark .hero {
 }
 
 .hero-kicker {
-  color: var(--marigold);
+  color: #facc15;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-lead {
   font-size: 1.15rem;
-  opacity: .9;
+  color: #f1f5f9;
+  opacity: .95;
 }
 
 .hero-actions {
