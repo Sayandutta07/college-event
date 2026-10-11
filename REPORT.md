@@ -24,14 +24,14 @@ college-event-site/
 | Home | Institute name, department, logo, sticky navigation, introduction, live countdown card |
 | Events | Six upcoming events with name, date, time, venue, description and category tag |
 | Registration | Student name, roll number, department, email, phone, gender, event selection |
-| Gallery | Six images in a responsive grid with zoom-and-caption hover effect |
+| Gallery | Five event photos (SIH winners, MSME Hackathon, Hack This Fall winners, Innovacion, Tech Day) in a responsive grid with zoom-and-caption hover effect |
 | About us | Department description and four coordinators |
 | Contact | Address, email, phone, office hours, feedback form |
 
 ## 4. JavaScript features
 1. **Form validation** — both forms are validated on submit with regular expressions (name, 10-digit roll number, email, Indian mobile number), required-field checks for selects and radio buttons, inline error messages, and live re-validation as the user corrects a field.
-2. **Event countdown** — finds the nearest future event from the `EVENTS` array and updates a days/hours/minutes/seconds display every second.
-3. **Digital clock** — shows the current IST time using `toLocaleTimeString` with `timeZone: 'Asia/Kolkata'`.
+2. **Event countdown** — finds the nearest future event (MEHACK) from the `EVENTS` array and updates a days/hours/minutes/seconds circular dial countdown display every second.
+3. **Circular clock** — displays current IST time using a circular analog clock with ticking hands alongside a live digital readout with `timeZone: 'Asia/Kolkata'`.
 4. **Dark / light mode** — toggled from the navbar, remembered in `localStorage`, and defaults to the OS preference (`prefers-color-scheme`).
 5. **Dynamic event filtering** — events are rendered from a JavaScript array and filtered by category with chip buttons; the registration dropdown is populated from the same array so the two never go out of sync.
 6. **Mobile navigation** — hamburger menu below 680 px, plus `IntersectionObserver` to highlight the section currently in view.

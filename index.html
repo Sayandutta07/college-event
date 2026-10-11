@@ -9,8 +9,9 @@
     content="Upcoming events, registration, gallery and contact for the Department of CSE (AIML), IEM Kolkata.">
   <link rel="icon" href="IEMKolkata.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=Syne:wght@700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/style.css">
@@ -71,13 +72,30 @@
           <h2 class="countdown-title" id="cdTitle">Loading…</h2>
           <p class="countdown-meta" id="cdMeta"></p>
           <div class="countdown" id="countdown">
-            <div><span id="cdDays">00</span><small>days</small></div>
-            <div><span id="cdHours">00</span><small>hours</small></div>
-            <div><span id="cdMins">00</span><small>minutes</small></div>
-            <div><span id="cdSecs">00</span><small>seconds</small></div>
+            <div class="countdown-circle"><span id="cdDays">00</span><small>days</small></div>
+            <div class="countdown-circle"><span id="cdHours">00</span><small>hours</small></div>
+            <div class="countdown-circle"><span id="cdMins">00</span><small>minutes</small></div>
+            <div class="countdown-circle"><span id="cdSecs">00</span><small>seconds</small></div>
           </div>
-          <!-- JS feature 2: digital clock -->
-          <p class="clock">Right now in Kolkata: <time id="clock">--:--:--</time></p>
+          <!-- JS feature 2: circular analog clock & Kolkata time -->
+          <div class="clock-container">
+            <div class="analog-clock" aria-label="Analog clock showing Kolkata time">
+              <div class="analog-face">
+                <span class="analog-mark mark-12"></span>
+                <span class="analog-mark mark-3"></span>
+                <span class="analog-mark mark-6"></span>
+                <span class="analog-mark mark-9"></span>
+                <div class="analog-hand hand-hour" id="analogHour"></div>
+                <div class="analog-hand hand-min" id="analogMin"></div>
+                <div class="analog-hand hand-sec" id="analogSec"></div>
+                <div class="analog-pivot"></div>
+              </div>
+            </div>
+            <div class="clock-details">
+              <span class="clock-label-text">Right now in Kolkata</span>
+              <time id="clock" class="digital-time">--:--:--</time>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
@@ -203,30 +221,24 @@
 
         <div class="gallery">
           <figure class="gallery-item">
-            <img src="sayan14kb.jpg" alt="Students working at laptops during the 24-hour hackathon" loading="lazy">
-            <figcaption>HackIEM 2025 — 24-hour hackathon</figcaption>
+            <img src="images/sih-winners.png" alt="IEM students winning Smart India Hackathon 2023 with certificates, trophies, and cash prize" loading="lazy">
+            <figcaption>Smart India Hackathon 2023 — Grand Finale Winners</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img src="images/tech-fest.jpg" alt="Crowd at the annual tech fest opening" loading="lazy">
-            <figcaption>Innovacion — annual tech fest</figcaption>
+            <img src="images/msme-hackathon.png" alt="Ministry of MSME Idea Hackathon 4.0 guidelines poster" loading="lazy">
+            <figcaption>MSME Idea Hackathon 4.0 — National Innovation</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img src="soumyadeeppic_70KB.jpeg" alt="Hands-on machine learning workshop in the AIML lab" loading="lazy">
-            <figcaption>Deep learning workshop, AIML lab</figcaption>
+            <img src="images/hack-this-fall-winners.png" alt="Team One N Zero winning Best Beginners Team at Hack This Fall 3.0" loading="lazy">
+            <figcaption>Hack This Fall 3.0 — Best Beginners' Team Winners</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img src="images/cultural-night.jpg" alt="Stage performance during the cultural night" loading="lazy">
-            <figcaption>Cultural night — department stage</figcaption>
+            <img src="images/innovacion-stage.jpg" alt="Dignitaries and professors at the Innovacion tech fest inauguration" loading="lazy">
+            <figcaption>Innovacion — Annual Tech Fest Inauguration</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img src="images/robotics.jpg" alt="Robot on the line-follower track at the robotics challenge"
-              loading="lazy">
-            <figcaption>Line-follower robotics challenge</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="images/guest-lecture.jpg" alt="Guest speaker addressing students in the seminar hall"
-              loading="lazy">
-            <figcaption>Industry guest lecture, seminar hall</figcaption>
+            <img src="images/tech-day-hackathon.png" alt="Faculty and TCS leaders awarding winners of the Tech Day Internal Hackathon" loading="lazy">
+            <figcaption>Tech Day Internal Hackathon — AI &amp; Cyber Security</figcaption>
           </figure>
         </div>
       </div>

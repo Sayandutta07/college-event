@@ -17,17 +17,17 @@
    --------------------------------------------------------------------- */
 const EVENTS = [
   {
-    id: 'hackiem',
-    name: 'HackIEM 2026',
-    date: '2026-09-26T09:00:00+05:30',
+    id: 'mehack',
+    name: 'MEHACK',
+    date: '2026-11-01T09:00:00+05:30',
     venue: 'AIML Lab, Gurukul Campus',
     category: 'technical',
-    description: '24-hour hackathon on applied machine learning. Teams of 2–4. Problem statements released at the opening ceremony; mentors available through the night.'
+    description: 'Flagship 24-hour hackathon on applied machine learning. Teams of 2–4. Problem statements released at the opening ceremony; mentors available through the night.'
   },
   {
     id: 'dl-workshop',
     name: 'Hands-on Deep Learning with PyTorch',
-    date: '2026-10-03T10:00:00+05:30',
+    date: '2026-11-03T10:00:00+05:30',
     venue: 'Lab 4, Ashram Building',
     category: 'workshop',
     description: 'Two-day workshop covering tensors, autograd, CNNs and a small speech-emotion classifier. Bring a laptop; no prior PyTorch experience needed.'
@@ -35,7 +35,7 @@ const EVENTS = [
   {
     id: 'guest-lecture',
     name: 'Guest lecture: Large language models for Indian languages',
-    date: '2026-10-10T14:30:00+05:30',
+    date: '2026-11-10T14:30:00+05:30',
     venue: 'Seminar Hall, 2nd floor',
     category: 'lecture',
     description: 'An industry researcher discusses building and evaluating language models for low-resource Indic languages, followed by an open Q&A.'
@@ -43,7 +43,7 @@ const EVENTS = [
   {
     id: 'cultural-night',
     name: 'Sharod Sandhya — cultural evening',
-    date: '2026-10-16T17:00:00+05:30',
+    date: '2026-11-16T17:00:00+05:30',
     venue: 'Main Auditorium',
     category: 'cultural',
     description: 'Pre-Puja cultural evening with music, dance and drama performances by students of the department. Open to families.'
@@ -51,7 +51,7 @@ const EVENTS = [
   {
     id: 'robotics',
     name: 'Line-follower robotics challenge',
-    date: '2026-11-07T10:00:00+05:30',
+    date: '2026-12-07T10:00:00+05:30',
     venue: 'IoT Lab',
     category: 'technical',
     description: 'Build and race an autonomous line-following robot. Kits available on request; judging on speed, accuracy and build quality.'
@@ -59,7 +59,7 @@ const EVENTS = [
   {
     id: 'innovacion',
     name: 'Innovacion 2026 — annual tech fest',
-    date: '2026-11-20T09:00:00+05:30',
+    date: '2026-12-20T09:00:00+05:30',
     venue: 'Gurukul Campus, all blocks',
     category: 'technical',
     description: 'Three days of coding contests, project exhibitions, paper presentations and gaming. The biggest event on the department calendar.'
@@ -183,16 +183,38 @@ function updateCountdown() {
 }
 
 /* ---------------------------------------------------------------------
-   3. Digital clock (India Standard Time)
+   3. Circular analog clock + digital clock (India Standard Time)
    --------------------------------------------------------------------- */
 const clockEl = document.getElementById('clock');
+const analogHour = document.getElementById('analogHour');
+const analogMin = document.getElementById('analogMin');
+const analogSec = document.getElementById('analogSec');
 
 function updateClock() {
-  clockEl.textContent = new Date().toLocaleTimeString('en-IN', {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString('en-IN', {
     timeZone: 'Asia/Kolkata',
     hour12: false,
     hour: '2-digit', minute: '2-digit', second: '2-digit'
   });
+
+  if (clockEl) {
+    clockEl.textContent = timeString;
+  }
+
+  // Calculate IST hours, minutes, seconds for circular analog clock
+  const parts = timeString.split(':').map(Number);
+  const hours = parts[0] % 12;
+  const minutes = parts[1];
+  const seconds = parts[2];
+
+  const secDeg = (seconds / 60) * 360;
+  const minDeg = ((minutes + seconds / 60) / 60) * 360;
+  const hourDeg = ((hours + minutes / 60 + seconds / 3600) / 12) * 360;
+
+  if (analogHour) analogHour.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+  if (analogMin) analogMin.style.transform = `translateX(-50%) rotate(${minDeg}deg)`;
+  if (analogSec) analogSec.style.transform = `translateX(-50%) rotate(${secDeg}deg)`;
 }
 
 updateCountdown();
